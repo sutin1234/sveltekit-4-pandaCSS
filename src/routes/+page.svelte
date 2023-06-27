@@ -1,19 +1,19 @@
 
+
 <script lang="ts">
-	import type { PageData } from './$types';
-	import { css } from "styled-system/css";
-	import { writable } from "svelte/store";
-	let style = writable({background: 'green.500', fontSize: '2xl', fontWeight: 'bold' });
-	const text = 'Hello Svelte kit PandaCSS 🐼!'
-	export let data: PageData
-function toggle(){
-	style.set({ fontSize: '2xl', fontWeight: 'bold', background: 'blue.400'})
-}
+	import { counter } from '$lib/stores/counter';
+	import { css } from 'styled-system/css';
+	const text = 'Hello Svelte kit PandaCSS 🐼!';
 
-style.subscribe(style => {
-	console.log('style changed ', style)
-})
+	const pandaCSS = {
+		textClass: css({fontSize: '2xl',color: 'green.500'}),
+		textClass2: css({fontSize: '2xl',color: 'red.500'}),
+		ghostBtn: css({fontSize: '2xl',color: 'orange.500'})
+	}
 
+	function toggle() {
+		counter.update((u) => !u);
+	}
 </script>
 
 <svelte:head>
@@ -22,9 +22,7 @@ style.subscribe(style => {
 </svelte:head>
 
 <section>
-	<div class={data.textClass}>{text}</div>
-	<div class={css($style)}>{text}</div>
-	<button class={data.ghostBtn} on:click={toggle}>toggle</button>
-	<pre>{JSON.stringify($style)}</pre>
+	<div class={pandaCSS.textClass}>{text}</div>
+	<div class={$counter === true ? pandaCSS.textClass2 : pandaCSS.textClass}>{text}</div>
+	<button class={pandaCSS.ghostBtn} on:click={toggle}>CVA button</button>
 </section>
-

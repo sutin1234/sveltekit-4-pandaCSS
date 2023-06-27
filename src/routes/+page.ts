@@ -12,11 +12,14 @@ export const load = (({ params }) => {
 			fontWeight: 'bold',
 			color: 'green.500'
 		}),
+		textClass2: css({
+			fontSize: '2xl',
+			color: 'red.500',
+			fontWeight: 'bold',
+		}),
 		ghostBtn: css({
 			fontSize: '2xl',
-			padding: '0.25rem',
-			margin: '0.25rem',
-			background: 'blue.400'
+			color: 'orange.500',
 		})
 	};
 }) satisfies PageLoad;
