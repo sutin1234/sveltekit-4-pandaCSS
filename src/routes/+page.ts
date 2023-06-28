@@ -5,7 +5,7 @@ import { css } from 'styled-system/css';
 export const prerender = true;
 import type { PageLoad } from './$types';
 
-export const load = (({ params }) => {
+export const load = (() => {
 	return {
 		textClass: css({
 			fontSize: '2xl',
@@ -14,9 +14,12 @@ export const load = (({ params }) => {
 		}),
 		ghostBtn: css({
 			fontSize: '2xl',
-			padding: '0.25rem',
-			margin: '0.25rem',
-			background: 'blue.400'
+			background: 'blue.400',
+			rounded: 'md',
+			px: '2',
+			color: 'white'
 		})
+		// style1: css({ fontSize: '2xl', fontWeight: 'bold', color: 'red.500' }),
+		// style2: css({ fontSize: '2xl', fontWeight: 'bold', color: 'blue.500' })
 	};
 }) satisfies PageLoad;

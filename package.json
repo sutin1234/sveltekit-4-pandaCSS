@@ -2,8 +2,9 @@
 	"name": "sveltekit-pandacss",
 	"version": "0.0.1",
 	"scripts": {
-		"prepare": "panda codegen",
-		"dev": "vite dev",
+		"prepare": "panda codegen --clean -p",
+		"panda": "panda --watch",
+		"dev": "vite dev & npm run panda",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",

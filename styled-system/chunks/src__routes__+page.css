@@ -1,0 +1,30 @@
+@layer utilities {
+
+  .font_bold {
+    font-weight: var(--font-weights-bold)
+    }
+
+  .text_green\.500 {
+    color: var(--colors-green-500)
+    }
+
+  .fs_2xl {
+    font-size: var(--font-sizes-2xl)
+    }
+
+  .bg_blue\.400 {
+    background: var(--colors-blue-400)
+    }
+
+  .rounded_md {
+    border-radius: var(--radii-md)
+    }
+
+  .px_2 {
+    padding-inline: var(--spacing-2)
+    }
+
+  .text_white {
+    color: var(--colors-white)
+    }
+}

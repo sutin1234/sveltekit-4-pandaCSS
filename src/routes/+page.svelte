@@ -1,30 +1,27 @@
-
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { css } from "styled-system/css";
-	import { writable } from "svelte/store";
-	let style = writable({background: 'green.500', fontSize: '2xl', fontWeight: 'bold' });
-	const text = 'Hello Svelte kit PandaCSS 🐼!'
-	export let data: PageData
-function toggle(){
-	style.set({ fontSize: '2xl', fontWeight: 'bold', background: 'blue.400'})
-}
+	import { css } from 'styled-system/css';
+	const text = (text: string) => `Svelte kit PandaCSS 🐼! ${text}`;
+	export let data: PageData;
 
-style.subscribe(style => {
-	console.log('style changed ', style)
-})
-
+	let toggleStyle = false;
+	$: myStyle = { fontSize: '2xl', fontWeight: 'bold', color: 'red.500' };
+	$: myStyle2 = { fontSize: '2xl', fontWeight: 'bold', color: 'blue.500' };
+	$: okStyle = toggleStyle ? css(myStyle) : css(myStyle2);
+	const staticStyle = css({ fontSize: '2xl', fontWeight: 'bold', color: 'red.500' })
+	const toggle = () => toggleStyle = !toggleStyle
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
 
 <section>
-	<div class={data.textClass}>{text}</div>
-	<div class={css($style)}>{text}</div>
-	<button class={data.ghostBtn} on:click={toggle}>toggle</button>
-	<pre>{JSON.stringify($style)}</pre>
-</section>
+	<pre class={css({ fontSize: '2xl'})}>
+		props style: {data.textClass}
+		reactive style: {okStyle}
+		static style: {staticStyle}
+	</pre>
 
+	<div class={data.textClass}>{text('style props')}</div>
+	<div class={okStyle}>{text('style reactive')}</div>
+	<div class={staticStyle}>{text('static reactive')}</div>
+	<button class={data.ghostBtn} on:click={toggle}>toggle</button>
+</section>
