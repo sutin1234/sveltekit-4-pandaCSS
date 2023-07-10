@@ -13,12 +13,6 @@
 </script>
 
 <section>
-	<pre class={css({ fontSize: '2xl' })}>
-		props style: {data.textClass}
-		reactive style: {okStyle}
-		static style: {staticStyle}
-	</pre>
-
 	<div class={data.textClass}>{text('style props')}</div>
 	<div class={okStyle}>{text('style reactive')}</div>
 	<div class={staticStyle}>{text('static reactive')}</div>

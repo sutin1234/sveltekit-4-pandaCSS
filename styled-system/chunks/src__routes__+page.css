@@ -1,15 +1,7 @@
 @layer utilities {
 
-  .font_bold {
-    font-weight: var(--font-weights-bold)
-    }
-
   .text_green\.500 {
     color: var(--colors-green-500)
-    }
-
-  .fs_2xl {
-    font-size: var(--font-sizes-2xl)
     }
 
   .bg_blue\.400 {
@@ -26,5 +18,21 @@
 
   .text_white {
     color: var(--colors-white)
+    }
+
+  .text_red\.500 {
+    color: var(--colors-red-500)
+    }
+
+  .font_bold {
+    font-weight: var(--font-weights-bold)
+    }
+
+  .fs_2xl {
+    font-size: var(--font-sizes-2xl)
+    }
+
+  .text_orange\.500 {
+    color: var(--colors-orange-500)
     }
 }
