@@ -1,6 +1,6 @@
 <script>
 	import { css } from 'styled-system/css';
-	import { aspectRatio, circle, divider, flex, hstack, square, stack, vstack } from 'styled-system/patterns';
+	import { circle, divider, flex, hstack, square, stack, vstack } from 'styled-system/patterns';
 </script>
 
 <svelte:head>
@@ -47,14 +47,14 @@
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Grid Patterns</div>
 	<div class={stack()}>
 		<button>First</button>
-		<div class={divider({ orientation: 'horizontal' })} />
+		<div class={divider({ orientation: 'horizontal' })}></div>
 		<button>Second</button>
 	</div>
 
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Cicle Patterns</div>
-	<div class={circle({ size: '12', bg: 'red.600' })} />
+	<div class={circle({ size: '12', bg: 'red.600' })}></div>
 
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Sqaure Patterns</div>
-	<div class={square({ size: '12', bg: 'red.400' })} />
+	<div class={square({ size: '12', bg: 'red.400' })}></div>
 
 </div>
