@@ -1,0 +1,1 @@
+import{c as l,m as x}from"./css.cecdfecc.js";const c={transform(s){const{direction:t,align:e,justify:r,wrap:n,basis:a,grow:f,shrink:i,...o}=s;return{display:"flex",flexDirection:t,alignItems:e,justifyContent:r,flexWrap:n,flexBasis:a,flexGrow:f,flexShrink:i,...o}}},m=(s={})=>c.transform(s,{map:x}),g=s=>l(m(s));export{g as f};
