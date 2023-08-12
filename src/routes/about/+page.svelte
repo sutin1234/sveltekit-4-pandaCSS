@@ -1,10 +1,12 @@
-<script>
-	import { css } from 'styled-system/css';
-	import { aspectRatio, circle, divider, flex, hstack, square, stack, vstack } from 'styled-system/patterns';
+
+
+<script lang="ts">
+	import { css } from '@css';
+	import { circle, divider, flex, hstack, square, stack, vstack, container } from '@patterns';
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>Svelte kit Panda CSS</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
@@ -51,10 +53,17 @@
 		<button>Second</button>
 	</div>
 
-	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Cicle Patterns</div>
-	<div class={circle({ size: '12', bg: 'red.600' })} />
+	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Circle Patterns</div>
+	<div class={circle({ size: '12', bg: 'red.600', color: 'white', fontWeight: 'bold', fontSize: '4xl' })}>S</div>
 
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Sqaure Patterns</div>
-	<div class={square({ size: '12', bg: 'red.400' })} />
+	<div class={square({ size: '12', bg: 'orange.600', color: 'white', fontWeight: 'bold', fontSize: '4xl' })}>T</div>
 
+
+	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Container Patterns</div>
+<div class={container()}>
+	<div>First</div>
+	<div>Second</div>
+	<div>Third</div>
+</div>
 </div>
