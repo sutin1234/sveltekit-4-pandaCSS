@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page, } from '$app/stores';
+	import { base } from '$app/paths';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 	import { flex } from '@patterns';
 	import { css } from '@css';
 
 	const pageList = [
-		{ path: '/', name: 'Home' },
-		{ path: '/about', name: 'About' }
+		{ path: base+'/', name: 'Home' },
+		{ path: base+'/about', name: 'About' }
 	];
+
+	console.log('pages ', pageList);
 </script>
 
 <header class={flex({ direction: 'row', justifyContent: 'space-between' })}>
