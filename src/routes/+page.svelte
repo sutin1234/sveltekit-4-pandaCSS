@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { css } from 'styled-system/css';
+	import { css } from '@css';
 	const text = (text: string) => `Svelte kit PandaCSS 🐼! ${text}`;
 	export let data: PageData;
 

@@ -8,8 +8,15 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
-	}
+		"strict": true,
+		"importsNotUsedAsValues": "preserve",
+		"isolatedModules": false, // true = export-type only
+		"preserveValueImports": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": [
+		"./src/*.d.ts"
+	]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes

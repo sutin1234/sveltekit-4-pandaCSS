@@ -17,6 +17,7 @@ export default defineConfig({
 	},
 
 	// The output directory for your css system
-	outdir: 'styled-system',
-	watch: true
+	outdir: 'tiny-panda',
+	watch: true,
+	emitPackage: true
 });

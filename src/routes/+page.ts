@@ -1,6 +1,6 @@
 // since there's no dynamic data here, we can prerender
 // it so that it gets served as a static asset in production
-import { css } from 'styled-system/css';
+import { css } from '@css';
 
 export const prerender = true;
 import type { PageLoad } from './$types';
@@ -15,11 +15,11 @@ export const load = (() => {
 		textClass2: css({
 			fontSize: '2xl',
 			color: 'red.500',
-			fontWeight: 'bold',
+			fontWeight: 'bold'
 		}),
 		ghostBtn: css({
 			fontSize: '2xl',
-			color: 'orange.500',
+			color: 'orange.500'
 		})
 		// style1: css({ fontSize: '2xl', fontWeight: 'bold', color: 'red.500' }),
 		// style2: css({ fontSize: '2xl', fontWeight: 'bold', color: 'blue.500' })

@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
-	import { flex } from 'styled-system/patterns';
-	import { css } from 'styled-system/css';
+	import { flex } from '@patterns';
+	import { css } from '@css';
 
 	const pageList = [
 		{ path: '/', name: 'Home' },

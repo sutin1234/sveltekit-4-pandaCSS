@@ -1,6 +1,23 @@
-<script>
-	import { css } from 'styled-system/css';
-	import { circle, divider, flex, hstack, square, stack, vstack } from 'styled-system/patterns';
+<script lang="ts">
+	import { css } from '@css';
+	import { circle, divider, flex, hstack, square, stack, vstack } from '@patterns';
+	import Button from "$lib/components/Button.svelte";
+
+	interface PandaColor {
+		bgColor: 'gray.800' | 'gray.500' | 'gray.200' | 'red.300';
+		backgroundColor?: string;
+		color?: string;
+	}
+
+	type Values<T> = {
+		[K in keyof T]: T[K];
+	}
+	const assignStyle = (props: Values<PandaColor>) => css(props)
+	assignStyle({
+		bgColor: 'red.300',
+	})
+
+
 </script>
 
 <svelte:head>
@@ -9,6 +26,8 @@
 </svelte:head>
 
 <div class={css({ p: 2 })}>
+	<Button label="test button"/>
+
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Stack Patterns</div>
 	<div class={stack({ gap: '6', padding: 4 })}>
 		<div class={css({ bgColor: 'red.100', p: 4 })}>First</div>
