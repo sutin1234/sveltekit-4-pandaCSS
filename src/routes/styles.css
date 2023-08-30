@@ -1,2 +1,2 @@
-@import '@fontsource/fira-mono';
+/*@import '@fontsource/fira-mono';*/
 @layer reset, base, tokens, recipes, utilities;
