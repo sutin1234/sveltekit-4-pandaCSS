@@ -1,16 +1,33 @@
-
-
 <script lang="ts">
 	import { css } from '@css';
-	import { circle, divider, flex, hstack, square, stack, vstack, container } from '@patterns';
+	import { circle, divider, flex, hstack, square, stack, vstack } from '@patterns';
+	import Button from "$lib/components/Button.svelte";
+
+	interface PandaColor {
+		bgColor: 'gray.800' | 'gray.500' | 'gray.200' | 'red.300';
+		backgroundColor?: string;
+		color?: string;
+	}
+
+	type Values<T> = {
+		[K in keyof T]: T[K];
+	}
+	const assignStyle = (props: Values<PandaColor>) => css(props)
+	assignStyle({
+		bgColor: 'red.300',
+	})
+
+
 </script>
 
 <svelte:head>
-	<title>Svelte kit Panda CSS</title>
+	<title>About</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
 <div class={css({ p: 2 })}>
+	<Button label="test button"/>
+
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Stack Patterns</div>
 	<div class={stack({ gap: '6', padding: 4 })}>
 		<div class={css({ bgColor: 'red.100', p: 4 })}>First</div>
@@ -49,21 +66,14 @@
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Grid Patterns</div>
 	<div class={stack()}>
 		<button>First</button>
-		<div class={divider({ orientation: 'horizontal' })} />
+		<div class={divider({ orientation: 'horizontal' })}></div>
 		<button>Second</button>
 	</div>
 
-	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Circle Patterns</div>
-	<div class={circle({ size: '12', bg: 'red.600', color: 'white', fontWeight: 'bold', fontSize: '4xl' })}>S</div>
+	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Cicle Patterns</div>
+	<div class={circle({ size: '12', bg: 'red.600' })}></div>
 
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Sqaure Patterns</div>
-	<div class={square({ size: '12', bg: 'orange.600', color: 'white', fontWeight: 'bold', fontSize: '4xl' })}>T</div>
+	<div class={square({ size: '12', bg: 'red.400' })}></div>
 
-
-	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Container Patterns</div>
-<div class={container()}>
-	<div>First</div>
-	<div>Second</div>
-	<div>Third</div>
-</div>
 </div>

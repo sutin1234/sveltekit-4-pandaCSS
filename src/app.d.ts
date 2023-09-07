@@ -10,3 +10,6 @@ declare global {
 }
 
 export {};
+declare module 'moment' {
+	export = moment;
+}
