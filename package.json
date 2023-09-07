@@ -4,7 +4,7 @@
 	"scripts": {
 		"prepare": "panda codegen --clean -p",
 		"panda": "panda --watch",
-		"dev": "vite dev & npm run panda",
+		"dev": "vite dev",
 		"static": "npx serve build",
 		"build": "vite build",
 		"preview": "vite preview",

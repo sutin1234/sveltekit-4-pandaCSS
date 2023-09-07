@@ -3,6 +3,4 @@
 
 </script>
 
-<button>
-  {label}
-</button>
+<button>{label}</button>

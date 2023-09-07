@@ -11,7 +11,6 @@
 		{ path: base+'/about', name: 'About' }
 	];
 
-	console.log('pages ', pageList);
 </script>
 
 <header class={flex({ direction: 'row', justifyContent: 'space-between' })}>
