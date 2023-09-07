@@ -17,6 +17,12 @@
 		bgColor: 'red.300',
 	})
 
+	const buttonStyle = css({ bgColor: 'red.400' , color: 'white', fontWeight: 'bold', borderRadius: 13, px: 10, py: 2})
+
+	function onClick(){
+		console.log('onClick')
+	}
+
 
 </script>
 
@@ -25,8 +31,8 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class={css({ p: 2 })}>
-	<Button label="test button"/>
+<div class={css({ p: 2, })}>
+	<Button label="test button" className={buttonStyle} onClick={onClick}/>
 
 	<div class={css({ color: 'red.600', fontSize: '2xl' })}>PandaCSS Stack Patterns</div>
 	<div class={stack({ gap: '6', padding: 4 })}>
